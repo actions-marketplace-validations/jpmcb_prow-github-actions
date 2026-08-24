@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jpmcb/prow-github-actions.git"
+    "url": "git+https://github.com/cncf/prow-github-actions.git"
   },
   "keywords": [
     "actions",
