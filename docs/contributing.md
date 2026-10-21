@@ -79,7 +79,10 @@ awk '/^SF:/{f=$0} /^BRDA:/{split($0,a,","); if (a[4] ~ /^-/) print f, $0}' cover
 
 Do not add tests, `/* v8 ignore */` markers or a lower branch threshold for
 these: the arm is covered, and an ignore marker would hide a real miss on the
-same line. A minimal reproduction against `@vitest/coverage-v8` 5.0.4:
+same line. A minimal reproduction against `@vitest/coverage-v8` 5.0.4 was
+filed upstream as [vitest-dev/vitest#11690](https://github.com/vitest-dev/vitest/issues/11690)
+and reproduced on Node 24.22.0 (V8 13.6.233.17-node.57), Vitest 5.0.4,
+Vite 8.3.4 and `ast-v8-to-istanbul` 1.0.7:
 
 ```ts
 export async function gate(a: boolean, b: boolean): Promise<string> {
